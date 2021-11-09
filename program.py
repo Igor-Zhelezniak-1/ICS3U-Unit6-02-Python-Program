@@ -7,6 +7,19 @@
 import random
 
 
+def largest_number_calculator(random_numbers):
+    # This function tells which number is higher
+
+    largest_number = random_numbers[1]
+    for loop_counter in range(0, len(random_numbers)):
+        if largest_number < random_numbers[loop_counter]:
+            largest_number = random_numbers[loop_counter]
+        else:
+            pass
+
+    return largest_number
+
+
 def main():
     # this function generate random numbers
     random_numbers = []
@@ -20,15 +33,9 @@ def main():
                 loop_counter + 1, random_numbers[loop_counter]
             )
         )
-        largest_number = random_numbers[loop_counter]
-
-    for loop_counter in range(0, 10):
-        if largest_number < random_numbers[loop_counter]:
-            largest_number = random_numbers[loop_counter]
-        else:
-            pass
-
+    largest_number = largest_number_calculator(random_numbers)
     print("\nThe largest number is {0}".format(largest_number))
+
     print("\nDone.")
 
 
