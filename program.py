@@ -10,7 +10,7 @@ import random
 def largest_number_calculator(random_numbers):
     # This function tells which number is higher
 
-    largest_number = random_numbers[1]
+    largest_number = random_numbers[0]
     for loop_counter in range(0, len(random_numbers)):
         if largest_number < random_numbers[loop_counter]:
             largest_number = random_numbers[loop_counter]
